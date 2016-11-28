@@ -1,5 +1,6 @@
 @import "materialize-0.97.7.css";
 
+
 .skeleton-elm-project {
   height: 100vh;
   display: flex;
@@ -7,3 +8,11 @@
   justify-content: center;
 }
 
+.buttons {
+    display: block;
+}
+
+.song-result {
+    text-align: center;
+    padding: 20px;
+}
