@@ -18,7 +18,48 @@ view model =
             []
         , Html.div
             [ Html.Attributes.class "waves-effect waves-light btn-large"
-            , Html.Events.onClick Update.ChangeText
+            , Html.Events.onClick Update.HappySong
             ]
-            [ Html.text model.buttonLabel ]
+            [ Html.text "Happy Tune" ]
+        , Html.div
+            [ Html.Attributes.class "waves-effect waves-light btn-large"
+            , Html.Events.onClick Update.SadSong
+            ]
+            [ Html.text "Sad Jam" ]
+        , Html.div
+            [ Html.Attributes.class "waves-effect waves-light btn-large"
+            , Html.Events.onClick Update.Dance
+            ]
+            [ Html.text "Dance" ]
+        , Html.div
+            [ Html.Attributes.class "waves-effect waves-light btn-large"
+            , Html.Events.onClick Update.RoadTrip
+            ]
+            [ Html.text "Road Trip" ]
+        , Html.div
+            []
+            [Html.p
+                []
+                [ Html.a 
+                    [ Html.Attributes.href model.songResult ] 
+                    [ Html.text ("Here is your " ++ (typeOfSong model) ++ " song") ]
+                ]
+            ]
         ]
+
+typeOfSong : Model.Model -> String
+typeOfSong model = 
+       case model.typeOfSong of
+        Model.Happy ->
+         "happy"
+        Model.Sad ->
+          "sad"
+        Model.Dance ->
+          "dance"
+        Model.RoadTrip ->
+          "road trip"
+
+
+
+
+

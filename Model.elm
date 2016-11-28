@@ -1,10 +1,14 @@
 module Model exposing (..)
 
+type TypeOfSong = Happy | Sad | Dance | RoadTrip
 
 type alias Model =
-    { buttonLabel : String }
+    { songResult : String
+    , typeOfSong : TypeOfSong }
 
 
 init : Model
 init =
-    { buttonLabel = "hello world!" }
+    { songResult = "https://www.youtube.com/watch?v=QXCGnTy-v2M" 
+    , typeOfSong = Happy }
+
